@@ -1,13 +1,13 @@
 public class Demo18 {
     public static void main(String[] args) {
+        myChild mc = new myChild(null);
+        mc.doSomething(20);
         
     }
 }
 class mySuper{
     int x = 10;
-    void doSomething(){
-        System.out.println(x);
-    }
+   
 
 }
 
@@ -16,5 +16,10 @@ class myChild extends mySuper{
     myChild(String x){
         this.x = x;
     }
+     void doSomething(double x){
+        System.out.println(x);
+    }
+
+
 
 }
