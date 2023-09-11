@@ -20,6 +20,8 @@ class myChild extends mySuper{
         System.out.println(x);
         System.out.println(this.x);
         System.out.println(super.x);
+        System.out.println(myChild.this.x);
+        System.out.println(myChild.super.x);
     }
 
 
