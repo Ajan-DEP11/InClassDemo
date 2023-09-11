@@ -21,6 +21,7 @@ class myChildClass extends parentClass{
     }
     public myChildClass(int id){
        // super();
+       
         System.out.println("myClass2");
     }
     public myChildClass(int id,String name){
