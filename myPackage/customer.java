@@ -7,7 +7,7 @@ public class customer {
     public String contact;
 
     protected void print(){
-        System.out.printf("id = %s, name =%s, add =%s, contact%s \n",id,name,address,contact);
+        System.out.printf("id = %s, name =%s, add =%s, contact=%s \n",id,name,address,contact);
     }
     
 }
