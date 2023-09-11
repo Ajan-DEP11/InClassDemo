@@ -8,6 +8,8 @@ class Parent2{
     void print(){
         System.out.println(x);
         System.out.println(this.x);
+        Sub2 ref = (Sub2)this;
+        System.out.println(ref.x);
         
     }
 }
