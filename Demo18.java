@@ -22,6 +22,9 @@ class myChild extends mySuper{
         System.out.println(super.x);
         System.out.println(myChild.this.x);
         System.out.println(myChild.super.x);
+        mySuper newRef = this;
+        System.out.println(newRef.x);
+        System.out.println(((myChild)newRef).x);
     }
 
 
