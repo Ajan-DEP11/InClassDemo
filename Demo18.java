@@ -1,6 +1,6 @@
 public class Demo18 {
     public static void main(String[] args) {
-        myChild mc = new myChild(null);
+        myChild mc = new myChild("ABC");
         mc.doSomething(20);
         
     }
