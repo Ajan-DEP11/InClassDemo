@@ -1,6 +1,7 @@
 public class Demo17 {
     public static void main(String[] args) {
-        
+        Sub2 s1 = new Sub2();
+        s1.print();
     }
 }
 class Parent2{
