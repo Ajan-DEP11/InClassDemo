@@ -18,6 +18,8 @@ class myChild extends mySuper{
     }
      void doSomething(double x){
         System.out.println(x);
+        System.out.println(this.x);
+        System.out.println(super.x);
     }
 
 
