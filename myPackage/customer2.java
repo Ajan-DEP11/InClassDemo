@@ -1,6 +1,6 @@
 package myPackage;
 
-public class customer {
+public class customer2 {
     private int id;
     String  name;
     protected String address;
