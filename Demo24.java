@@ -31,17 +31,17 @@ public class Demo24 {
 
 enum ServiceType{
 
-    ITEM(1),CART(2),REPORT(3);
+    ITEM(),CART(),REPORT();
 
-    private int index;
+    // private int index;
 
-    ServiceType(int index){
-        this.index = index;
+    // ServiceType(int index){
+    //     this.index = index;
 
-    }
+    
     public static ServiceType getService(int index){
         for(ServiceType type : ServiceType.values()){
-            if(type.index == index) return type;
+            if((type.ordinal() +1 ) == index) return type;
         } 
         throw new RuntimeErrorException(null, "Invalid service type");
     }
