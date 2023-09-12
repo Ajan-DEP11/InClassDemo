@@ -34,8 +34,20 @@ class MonthsClone{
     public static final MonthsClone MAY = new MonthsClone();
     public static final MonthsClone JUNE = new MonthsClone();
 
-    private MonthsClone(){
-        System.out.println("MonthsClone");
+    private String fieldname;
+    private static int count;
+
+    {
+        fieldname = MonthsClone.class.getDeclaredFields()[count++].getName();
+    }
+
+    // private MonthsClone(){
+    //     System.out.println("MonthsClone");
+    // }
+
+    @Override
+    public String toString(){
+       return fieldname;
     }
     
     
