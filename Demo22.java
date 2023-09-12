@@ -14,10 +14,16 @@ public class Demo22 {
         
     }
 }
+
+enum UserRole {
+    ADMIN,GUEST;
+}
+
+
  abstract class User{
     String username;
     String password;
-    String role;
+    UserRole role;
     boolean Logged;
 
     public abstract void Login(); 
@@ -55,7 +61,7 @@ public class Demo22 {
     public AdminUser(String username,String password){
         this.username= username;
         this.password = password;
-        this.role = "ROLE_ADMIN";
+        this.role = UserRole.ADMIN;
     }
     public void Login(){
        for(String password : passwords){
@@ -74,7 +80,7 @@ public class Demo22 {
 public GuestUsser(String username,String password){
         this.username= username;
         this.password = password;
-        this.role = "ROLE_GUEST";
+        this.role =UserRole.GUEST;
     }
     @Override
 
