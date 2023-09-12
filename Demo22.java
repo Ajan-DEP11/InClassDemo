@@ -9,22 +9,26 @@ public class Demo22 {
           adminUser1.Login();
           adminUser2.Login();
           guestUser3.Login();
+
+          //new User();
         
     }
 }
- class User{
+ abstract class User{
     String username;
     String password;
     String role;
     boolean Logged;
 
-    public void Login(){
-        System.out.printf("%s logged in \n",username);
-        Logged = true;
+    public abstract void Login(); 
+    // {
+    //     System.out.printf("%s logged in \n",username);
+    //     Logged = true;
 
-    }
+    // }
+   
 
-    public void Logout(){
+    public final void Logout(){ //final can be here 
         if(Logged){
             System.out.printf("%s logged out \n",username);
         }else{
@@ -37,11 +41,17 @@ public class Demo22 {
     }
 
  }
+ 
+  class ITUser extends User{
+        public void Login(){
+            
+        }
+    }
 
  class AdminUser extends User{
 
     private String[] passwords = {"IJSE_12345","IJSE_1234768"};
-    
+
     public AdminUser(String username,String password){
         this.username= username;
         this.password = password;
