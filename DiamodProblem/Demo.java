@@ -7,20 +7,30 @@ public class Demo {
 }
 
 interface AwesomeIdea{
-    void execute();
+    //void execute();
+    public static void doSomething(){}
 }
 
 interface MySuperAwesomeIdea extends AwesomeIdea{
+    // default void execute(){
+    //     //System.out.println("My Super awesome");
+    // }
+
+    public static void doSomething(){}
 
 }
 
 interface MyCrazyIdea extends AwesomeIdea{
+    // default void execute(){
+
+    // }
+    public static void doSomething(){}
 
 }
 class DreamComeTrue implements MySuperAwesomeIdea,MyCrazyIdea{
 
-@Override
-    public void execute(){
+  //public void execute(){
 
-    }
+}
+  
 }
