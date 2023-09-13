@@ -9,7 +9,13 @@ abstract class MyabstractCalss{
     abstract void myMethod2(); //----> package private are also allowed
 }
 
-interface IMyInterface{ //IMyinterface convention of industry starting with "I"
+interface IMyInterface{ 
+ /**
+ * 
+ */
+void myMethod3();
+}
+//IMyinterface convention of industry starting with "I"
 
     //public abstract void myMethod();
     void myMethod();
@@ -18,16 +24,55 @@ interface IMyInterface{ //IMyinterface convention of industry starting with "I"
 
 }
 
+
+
+
+
+
+
 interface IMyInterface2 extends IMyInterface/*ImyInterface4,ImyInterface5*/{
 
     void myMethod5();
 
 }
+class MyConcreatClass implements IMyInterface2{
 
-//class MyConcreatClass implements IMyInterface2{
-   // public void myMethod5();
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        
+        return super.clone();
+    }
 
-  //  public void myMethod();
+    @Override
+    public boolean equals(Object obj) {
+        
+        return super.equals(obj);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+
+        super.finalize();
+    }
+
+    @Override
+    public void myMethod5() {
+        
+        
+    }
+
+    @Override
+    public void myMethod3() {
+      
+        
+    }
+   
+
+    @Override
+    public void myMethod() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'myMethod'");
+    }
 
 
 }
