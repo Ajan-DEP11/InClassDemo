@@ -14,6 +14,9 @@ public class Demo32 {
 
         myMaths myMaths =( x,y)-> x*x +y*y;
         System.out.println(myMaths.Don(2, 5));
+
+        System.out.println("-------------");
+    
         
     }
     
@@ -25,6 +28,7 @@ interface myFun{
 
 interface myMaths{
     int Don(int x, int y);
+    static void doSomething(){} //no any downs coz there is void so thts not retun anything
 }
 
 
