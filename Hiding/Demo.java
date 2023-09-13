@@ -40,6 +40,18 @@ interface Idea1 extends SuperIdea{
 }
 
 interface Idea2 {
+
+    int x = getX();
+    int y = getY();
+    static int getX(){
+        System.out.println("getx()");
+        return 10;
+    }
+
+    static int getY(){
+        System.out.println("getY()");
+        return 10;
+    }
    public static void execute(){
         System.out.println("idea2");
     }
