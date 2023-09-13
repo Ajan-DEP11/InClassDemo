@@ -8,19 +8,25 @@ public class Demo33 {
         System.gc();
 
         System.out.println("------------------");
-        new MyCrazyClass();
-        new MyCrazyClass();
-        new MyCrazyClass();
-        new MyCrazyClass();
-        new MyCrazyClass();
-        new MyCrazyClass();
+        // new MyCrazyClass();
+        // new MyCrazyClass();
+        // new MyCrazyClass();
+        // new MyCrazyClass();
+        // new MyCrazyClass();
+        // new MyCrazyClass();
 
+        // System.gc();
+
+        MyCrazyClassWrapper Wrapper = new MyCrazyClassWrapper(new MyCrazyClass());
         System.gc();
+        Wrapper.crazyClass = null;
+        System.gc();
+
         
     }
 }
 class MyCrazyClassWrapper{
-    private MyCrazyClass crazyClass;
+    MyCrazyClass crazyClass;
     public MyCrazyClassWrapper(MyCrazyClass crazyClass){
         this.crazyClass = crazyClass;
     }
@@ -33,6 +39,9 @@ class MyCrazyClass{
     }
 @Override
     protected void finalize()throws Throwable{
+
+        System.out.println(Thread.currentThread().getName());
+        System.out.println("***********");
         System.out.println("dismissed");
     }
 }
