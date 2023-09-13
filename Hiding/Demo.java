@@ -9,8 +9,8 @@ public class Demo {
     }
 }
 class SuperClass{
-    public void execute(){
-        
+    public static void execute(){
+        System.out.println("Super class");
     }
 
 }
@@ -31,7 +31,7 @@ interface Idea1 extends SuperIdea{
 
 }
 interface Idea2 {
-    public static void execute(){
+   public static void execute(){
         System.out.println("idea2");
     }
 }
