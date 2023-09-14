@@ -22,6 +22,8 @@ public class Demo33 {
         Wrapper.crazyClass = null;
         System.gc();
 
+        while(true) Thread.onSpinWait();
+
         
     }
 }
